@@ -1,7 +1,7 @@
 Group Project - README Template
 ===
 
-# APP_NAME_HERE
+# iTag
 
 ## Table of Contents
 1. [Overview](#Overview)
