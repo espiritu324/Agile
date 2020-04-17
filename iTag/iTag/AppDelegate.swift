@@ -20,9 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Parse.initialize(
             with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
-                configuration.applicationId = "ARtag"
-                configuration.server = "https://artag.herokuapp.com/parse"
-//                parse-dashboard --appId ARtag --masterKey myMasterKey --serverURL "https://artag.herokuapp.com/parse
+                configuration.applicationId = "iTag"
+                configuration.server = "https://safe-lowlands-06948.herokuapp.com/parse"
+                // Use to open dashboard on parse!!
+                // parse-dashboard --appId iTag --masterKey myMasterKey --serverURL "https://safe-lowlands-06948.herokuapp.com/parse"
             })
         )
         
