@@ -38,6 +38,8 @@ class LoginViewController: UIViewController {
         user.username = usernameField.text
         user.password = passwordField.text
         user["score"] = 0
+        user["latitude"] = 0.0
+        user["longitude"] = 0.0
         
         user.signUpInBackground { (success, error) in
             if success {
