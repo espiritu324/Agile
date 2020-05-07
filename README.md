@@ -21,17 +21,17 @@ This project, iTag, uses Raycasting for player worldspace, ARKit3 for player det
 
 **Required Must-have Stories**
 
-* User Login and Signup
-* User can scroll through list of players and status' (who's it and not it)
-* User can view scoreboard with all players
-* user can view map
-* user can access AR View to detect another player and "tag" them
+* (done) User Login and Signup
+* (done) User can scroll through list of players and status' (who's it and not it)
+* (done) User can view scoreboard with all players
+* (done) user can view map
+* (done) user can access AR View to detect another player and "tag" them
 
 **Optional Nice-to-have Stories**
 
 * Plot each user location on map
 * auto refresh scores with each tag (instead of refreshing manually)
-* Plot points on AR View inorder to ensure human detection
+* (done) Plot points on AR View inorder to ensure human detection
 
 ### 2. Screen Archetypes
 
