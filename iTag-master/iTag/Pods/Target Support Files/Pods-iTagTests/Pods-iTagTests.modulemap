@@ -1,0 +1,6 @@
+framework module Pods_iTagTests {
+  umbrella header "Pods-iTagTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
