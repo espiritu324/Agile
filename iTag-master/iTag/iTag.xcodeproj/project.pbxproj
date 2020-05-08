@@ -18,9 +18,10 @@
 		18068693243E88CE00EEE330 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068692243E88CE00EEE330 /* LoginViewController.swift */; };
 		18068695243E88D700EEE330 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068694243E88D700EEE330 /* FeedViewController.swift */; };
 		1874B2492442ABED0085D0FB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874B2482442ABED0085D0FB /* MapViewController.swift */; };
-		1B08637A24621CA800D1FCD8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B08637924621CA800D1FCD8 /* Utilities.swift */; };
-		1B08637C24621CBA00D1FCD8 /* MessageLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B08637B24621CBA00D1FCD8 /* MessageLabel.swift */; };
-		1B08637E24621CEF00D1FCD8 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B08637D24621CEF00D1FCD8 /* ARViewController.swift */; };
+		1B086388246501F000D1FCD8 /* character in Resources */ = {isa = PBXBuildFile; fileRef = 1B086387246501F000D1FCD8 /* character */; };
+		1B08638E246503CB00D1FCD8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B08638D246503CB00D1FCD8 /* Utilities.swift */; };
+		1B086390246503DD00D1FCD8 /* ArViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B08638F246503DD00D1FCD8 /* ArViewController.swift */; };
+		1B086392246503F500D1FCD8 /* MessageLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B086391246503F500D1FCD8 /* MessageLabel.swift */; };
 		354D339F8922E1BAF98BE671 /* Pods_iTagTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A327FCF175A550B8EDEF4849 /* Pods_iTagTests.framework */; };
 		4C8BFD7096F0ACB7ADB480DF /* Pods_iTag_iTagUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8469204664BEA23DEF93AD /* Pods_iTag_iTagUITests.framework */; };
 /* End PBXBuildFile section */
@@ -60,9 +61,10 @@
 		18068692243E88CE00EEE330 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		18068694243E88D700EEE330 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		1874B2482442ABED0085D0FB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		1B08637924621CA800D1FCD8 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		1B08637B24621CBA00D1FCD8 /* MessageLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLabel.swift; sourceTree = "<group>"; };
-		1B08637D24621CEF00D1FCD8 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		1B086387246501F000D1FCD8 /* character */ = {isa = PBXFileReference; lastKnownFileType = folder; path = character; sourceTree = "<group>"; };
+		1B08638D246503CB00D1FCD8 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		1B08638F246503DD00D1FCD8 /* ArViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArViewController.swift; sourceTree = "<group>"; };
+		1B086391246503F500D1FCD8 /* MessageLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLabel.swift; sourceTree = "<group>"; };
 		5FB2441DBC720659383CEA49 /* Pods_iTag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D9418D41C4A685F3CF7350 /* Pods-iTagTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTagTests.release.xcconfig"; path = "Target Support Files/Pods-iTagTests/Pods-iTagTests.release.xcconfig"; sourceTree = "<group>"; };
 		96B0F16EB3C47EF78484A136 /* Pods-iTagTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTagTests.debug.xcconfig"; path = "Target Support Files/Pods-iTagTests/Pods-iTagTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		1806865D243E550A00EEE330 /* iTag */ = {
 			isa = PBXGroup;
 			children = (
+				1B086387246501F000D1FCD8 /* character */,
 				1806865E243E550A00EEE330 /* AppDelegate.swift */,
 				18068662243E550A00EEE330 /* Experience.rcproject */,
 				18068664243E550A00EEE330 /* Main.storyboard */,
@@ -135,9 +138,9 @@
 				18068692243E88CE00EEE330 /* LoginViewController.swift */,
 				18068694243E88D700EEE330 /* FeedViewController.swift */,
 				1874B2482442ABED0085D0FB /* MapViewController.swift */,
-				1B08637924621CA800D1FCD8 /* Utilities.swift */,
-				1B08637B24621CBA00D1FCD8 /* MessageLabel.swift */,
-				1B08637D24621CEF00D1FCD8 /* ARViewController.swift */,
+				1B086391246503F500D1FCD8 /* MessageLabel.swift */,
+				1B08638D246503CB00D1FCD8 /* Utilities.swift */,
+				1B08638F246503DD00D1FCD8 /* ArViewController.swift */,
 			);
 			path = iTag;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			files = (
 				1806866B243E550C00EEE330 /* LaunchScreen.storyboard in Resources */,
 				18068668243E550C00EEE330 /* Assets.xcassets in Resources */,
+				1B086388246501F000D1FCD8 /* character in Resources */,
 				18068666243E550A00EEE330 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,11 +426,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B08637A24621CA800D1FCD8 /* Utilities.swift in Sources */,
-				1B08637C24621CBA00D1FCD8 /* MessageLabel.swift in Sources */,
+				1B08638E246503CB00D1FCD8 /* Utilities.swift in Sources */,
 				18068693243E88CE00EEE330 /* LoginViewController.swift in Sources */,
-				1B08637E24621CEF00D1FCD8 /* ARViewController.swift in Sources */,
+				1B086392246503F500D1FCD8 /* MessageLabel.swift in Sources */,
 				1806865F243E550A00EEE330 /* AppDelegate.swift in Sources */,
+				1B086390246503DD00D1FCD8 /* ArViewController.swift in Sources */,
 				18068695243E88D700EEE330 /* FeedViewController.swift in Sources */,
 				1874B2492442ABED0085D0FB /* MapViewController.swift in Sources */,
 				18068663243E550A00EEE330 /* Experience.rcproject in Sources */,

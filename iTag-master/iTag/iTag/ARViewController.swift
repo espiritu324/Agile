@@ -34,10 +34,9 @@ class ViewController: UIViewController, ARSessionDelegate {
     @IBOutlet weak var toggleRobotButton: UIButton!
     @IBOutlet weak var jointNamePickerView: UIPickerView!
     @IBOutlet weak var statusText: UITextField!
-    @IBAction func captureButton(_ sender: Any) {
-        statusText.text = "No Player in sight"
+    @IBAction func tagButton(_ sender: Any) {
+        statusText.text = "Unable to find player"
     }
-    
     
     // The 3D character to display.
     var character: BodyTrackedEntity?
@@ -67,7 +66,7 @@ class ViewController: UIViewController, ARSessionDelegate {
         jointNamePickerView.dataSource = self
         jointNamePickerView.delegate = self
         
-        jointNames.append("Waiting for a body anchor..")
+//        jointNames.append("Waiting for a body anchor..")
         jointNamePickerView.reloadAllComponents()
 
         

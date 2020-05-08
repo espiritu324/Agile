@@ -16,5 +16,23 @@ target 'iTag' do
   target 'iTagUITests' do
     # Pods for testing
   end
+  
+  target 'RealityKit' do
+    inherit! :search_paths
+    # Pods for testing
+    pod "Parse"
+  end
+  
+  target 'ARKit' do
+    inherit! :search_paths
+    # Pods for testing
+    pod "Parse"
+  end
+  
+  target 'Combine' do
+    inherit! :search_paths
+    # Pods for testing
+    pod "Parse"
+  end
 
 end

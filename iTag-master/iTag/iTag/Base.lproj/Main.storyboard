@@ -187,12 +187,12 @@
                         <segue destination="glt-z7-JEJ" kind="relationship" relationship="viewControllers" id="ZEv-ik-LDm"/>
                         <segue destination="QFH-4o-MtB" kind="relationship" relationship="viewControllers" id="QLb-mO-BgD"/>
                         <segue destination="WOq-ak-SpG" kind="relationship" relationship="viewControllers" id="oJi-p5-anc"/>
-                        <segue destination="s5C-09-f1W" kind="relationship" relationship="viewControllers" id="VZ1-Sc-iFs"/>
+                        <segue destination="9KM-ca-xnt" kind="relationship" relationship="viewControllers" id="5I0-ne-SmI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qsc-ic-Wlv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="574" y="-534"/>
+            <point key="canvasLocation" x="794" y="-516"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gsR-P4-MaO">
@@ -229,122 +229,102 @@
             <point key="canvasLocation" x="794.20289855072474" y="141.96428571428569"/>
         </scene>
         <!--ARView-->
-        <scene sceneID="45b-8e-Jth">
+        <scene sceneID="jZb-G7-WTE">
             <objects>
-                <viewController id="s5C-09-f1W" userLabel="ARView" customClass="ViewController" customModule="iTag" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MWL-SB-9gK" userLabel="ARView" customClass="ARView" customModule="RealityKit">
+                <viewController id="9KM-ca-xnt" userLabel="ARView" customClass="ViewController" customModule="Joint_Visualizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h8G-Ib-Nau" userLabel="ARView" customClass="ARView" customModule="RealityKit">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dGZ-FB-Arr">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5DW-h8-vIh">
                                 <rect key="frame" x="20" y="599" width="374" height="33"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGP-FX-5en">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBe-aa-JFc">
                                         <rect key="frame" x="0.0" y="0.0" width="141" height="33"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Show joints (3D) |"/>
                                         <connections>
-                                            <action selector="showAllJoints3D" destination="s5C-09-f1W" eventType="touchUpInside" id="H59-DA-fiE"/>
+                                            <action selector="showAllJoints3D" destination="9KM-ca-xnt" eventType="touchUpInside" id="3UU-7Y-x8G"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08E-JA-ygk" userLabel="Show all (2D) |">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHj-lP-7NU" userLabel="Show all (2D) |">
                                         <rect key="frame" x="151" y="0.0" width="141" height="33"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Show joints (2D) |"/>
                                         <connections>
-                                            <action selector="showAllJoints2D" destination="s5C-09-f1W" eventType="touchUpInside" id="yui-Ph-tZp"/>
+                                            <action selector="showAllJoints2D" destination="9KM-ca-xnt" eventType="touchUpInside" id="AjI-dv-hMV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFm-qP-aFz">
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUX-Ks-Ll2">
                                         <rect key="frame" x="302" y="0.0" width="72" height="33"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Clear"/>
                                         <connections>
-                                            <action selector="hideAllJoints2D" destination="s5C-09-f1W" eventType="touchUpInside" id="jfl-B8-eT2"/>
-                                            <action selector="hideAllJoints3D" destination="s5C-09-f1W" eventType="touchUpInside" id="Iiq-C4-0Jh"/>
+                                            <action selector="hideAllJoints2D" destination="9KM-ca-xnt" eventType="touchUpInside" id="sBw-BK-dfE"/>
+                                            <action selector="hideAllJoints3D" destination="9KM-ca-xnt" eventType="touchUpInside" id="AKD-fY-4Fa"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z5d-PT-6Q4">
-                                <rect key="frame" x="20" y="781" width="184" height="41"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8D-qe-605">
+                                <rect key="frame" x="20" y="622" width="374" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="rh9-0h-USq"/>
+                                    <constraint firstAttribute="height" constant="200" id="shv-2o-xkk"/>
                                 </constraints>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poN-zP-VoY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ham-ft-jSW">
                                 <rect key="frame" x="364" y="21.5" width="30" height="27.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Jn0-4V-R1z"/>
-                                    <constraint firstAttribute="width" constant="30" id="rPz-a5-PxZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="OVo-Gc-lRA"/>
+                                    <constraint firstAttribute="width" constant="30" id="bfM-za-HF0"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" backgroundImage="person" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
                                 </state>
                                 <connections>
-                                    <action selector="toggleRobotVisibility" destination="s5C-09-f1W" eventType="touchUpInside" id="oUR-O7-41h"/>
+                                    <action selector="toggleRobotVisibility" destination="9KM-ca-xnt" eventType="touchUpInside" id="PUu-Z6-3eV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPY-Zr-lt4" userLabel="Remove Picked Joints">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJs-ah-hCV" userLabel="Remove Picked Joints">
                                 <rect key="frame" x="364" y="67" width="30" height="27.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="EF2-Om-7Zd"/>
-                                    <constraint firstAttribute="height" constant="30" id="nJx-eX-p5m"/>
+                                    <constraint firstAttribute="width" constant="30" id="NWL-wS-tmQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="glg-EH-kTE"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" backgroundImage="clear" catalog="system"/>
                                 <connections>
-                                    <action selector="removeAllPickedJoints" destination="s5C-09-f1W" eventType="touchUpInside" id="i6C-n7-AES"/>
+                                    <action selector="removeAllPickedJoints" destination="9KM-ca-xnt" eventType="touchUpInside" id="hjg-r3-HZl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhJ-iM-sS8">
-                                <rect key="frame" x="157" y="664" width="100" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Tag">
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="captureButton:" destination="s5C-09-f1W" eventType="touchUpInside" id="5fs-Xs-qFs"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Status..." borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GJs-fU-6K6">
-                                <rect key="frame" x="105" y="301" width="204" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" hint="Status..."/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="poN-zP-VoY" firstAttribute="top" secondItem="aiO-dk-Rp9" secondAttribute="top" constant="20" id="9Z4-Lj-Lfx"/>
-                            <constraint firstItem="dGZ-FB-Arr" firstAttribute="bottom" secondItem="Z5d-PT-6Q4" secondAttribute="top" constant="10" id="Aqd-ET-sOI"/>
-                            <constraint firstItem="Z5d-PT-6Q4" firstAttribute="leading" secondItem="MWL-SB-9gK" secondAttribute="leading" constant="20" id="FBz-za-eg3"/>
-                            <constraint firstItem="dGZ-FB-Arr" firstAttribute="leading" secondItem="aiO-dk-Rp9" secondAttribute="leading" constant="20" id="Ggf-D4-riK"/>
-                            <constraint firstItem="aiO-dk-Rp9" firstAttribute="trailing" secondItem="Z5d-PT-6Q4" secondAttribute="trailing" constant="20" id="JZo-0h-2ry"/>
-                            <constraint firstAttribute="trailing" secondItem="dGZ-FB-Arr" secondAttribute="trailing" constant="20" id="SiG-LV-N98"/>
-                            <constraint firstItem="aiO-dk-Rp9" firstAttribute="trailing" secondItem="poN-zP-VoY" secondAttribute="trailing" constant="20" id="bJA-Hx-KvF"/>
-                            <constraint firstItem="aiO-dk-Rp9" firstAttribute="trailing" secondItem="LPY-Zr-lt4" secondAttribute="trailing" constant="20" id="oOd-mC-jTR"/>
-                            <constraint firstItem="LPY-Zr-lt4" firstAttribute="top" secondItem="poN-zP-VoY" secondAttribute="bottom" constant="16" id="sMK-xD-bcT"/>
-                            <constraint firstAttribute="bottom" secondItem="Z5d-PT-6Q4" secondAttribute="bottom" constant="20" id="vhJ-GK-1QF"/>
+                            <constraint firstItem="Ham-ft-jSW" firstAttribute="top" secondItem="ttX-rU-3NZ" secondAttribute="top" constant="20" id="0za-p6-RgN"/>
+                            <constraint firstItem="ttX-rU-3NZ" firstAttribute="trailing" secondItem="UJs-ah-hCV" secondAttribute="trailing" constant="20" id="PxA-V7-0uz"/>
+                            <constraint firstAttribute="trailing" secondItem="5DW-h8-vIh" secondAttribute="trailing" constant="20" id="QxG-AG-c91"/>
+                            <constraint firstItem="UJs-ah-hCV" firstAttribute="top" secondItem="Ham-ft-jSW" secondAttribute="bottom" constant="16" id="SYL-Ws-KaN"/>
+                            <constraint firstItem="5DW-h8-vIh" firstAttribute="bottom" secondItem="g8D-qe-605" secondAttribute="top" constant="10" id="Vc7-2y-clX"/>
+                            <constraint firstItem="g8D-qe-605" firstAttribute="leading" secondItem="h8G-Ib-Nau" secondAttribute="leading" constant="20" id="Zhl-70-Ps2"/>
+                            <constraint firstItem="5DW-h8-vIh" firstAttribute="leading" secondItem="ttX-rU-3NZ" secondAttribute="leading" constant="20" id="fxX-BZ-s46"/>
+                            <constraint firstAttribute="bottom" secondItem="g8D-qe-605" secondAttribute="bottom" constant="20" id="k0K-A1-2F4"/>
+                            <constraint firstItem="ttX-rU-3NZ" firstAttribute="trailing" secondItem="Ham-ft-jSW" secondAttribute="trailing" constant="20" id="noz-fJ-Vdb"/>
+                            <constraint firstItem="ttX-rU-3NZ" firstAttribute="trailing" secondItem="g8D-qe-605" secondAttribute="trailing" constant="20" id="oIN-Td-wzP"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="aiO-dk-Rp9"/>
+                        <viewLayoutGuide key="safeArea" id="ttX-rU-3NZ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Camera" selectedImage="play" catalog="system" id="8Rz-tJ-svE"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="MZC-dH-0A5"/>
                     <connections>
-                        <outlet property="arView" destination="MWL-SB-9gK" id="55g-CX-sFq"/>
-                        <outlet property="captureButton" destination="fhJ-iM-sS8" id="8Hl-0y-ok4"/>
-                        <outlet property="jointNamePickerView" destination="Z5d-PT-6Q4" id="WDT-Km-io7"/>
-                        <outlet property="statusText" destination="GJs-fU-6K6" id="2Ip-db-WdB"/>
-                        <outlet property="toggleRobotButton" destination="poN-zP-VoY" id="srY-2b-p3c"/>
+                        <outlet property="arView" destination="h8G-Ib-Nau" id="4Bo-gY-5N8"/>
+                        <outlet property="jointNamePickerView" destination="g8D-qe-605" id="Mag-dV-Dqm"/>
+                        <outlet property="toggleRobotButton" destination="Ham-ft-jSW" id="gVf-ZV-MKS"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zpf-W2-94j" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kge-hV-ydk" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1702.8985507246377" y="-1264.2857142857142"/>
+            <point key="canvasLocation" x="1703" y="-1226"/>
         </scene>
     </scenes>
     <resources>
@@ -354,6 +334,5 @@
         <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
-        <image name="play" catalog="system" width="120" height="128"/>
     </resources>
 </document>
