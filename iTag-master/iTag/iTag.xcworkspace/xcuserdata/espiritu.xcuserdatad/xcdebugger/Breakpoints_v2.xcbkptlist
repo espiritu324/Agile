@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C542B5F0-4FB3-42EE-AC50-EC56123C9CFB"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5AEFE813-0DFB-4471-B1DC-77D11D29BB9B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iTag/ARViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "5AEFE813-0DFB-4471-B1DC-77D11D29BB9B - b4e675a97a04f953"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iTag.ViewController.arView.getter : Swift.Optional&lt;RealityKit.ARView&gt;"
+                  moduleName = "iTag"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/espiritu/Downloads/iTag-master/iTag/iTag/ARViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "5AEFE813-0DFB-4471-B1DC-77D11D29BB9B - 3f4140abddf30fa7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iTag.ViewController.arView.setter : Swift.Optional&lt;RealityKit.ARView&gt;"
+                  moduleName = "iTag"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/espiritu/Downloads/iTag-master/iTag/iTag/ARViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "5AEFE813-0DFB-4471-B1DC-77D11D29BB9B - bd6db5c167d5c4b0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iTag.ViewController.arView.modify : Swift.Optional&lt;RealityKit.ARView&gt;"
+                  moduleName = "iTag"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/espiritu/Downloads/iTag-master/iTag/iTag/ARViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "5AEFE813-0DFB-4471-B1DC-77D11D29BB9B - 38770d9d534b720"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iTag.ViewController.arView.modify : Swift.Optional&lt;RealityKit.ARView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "iTag"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/espiritu/Downloads/iTag-master/iTag/iTag/ARViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "5AEFE813-0DFB-4471-B1DC-77D11D29BB9B - 3b1079d29b17e9db"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iTag.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; iTag.ViewController"
+                  moduleName = "iTag"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/espiritu/Downloads/iTag-master/iTag/iTag/ARViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "340">
+               </Location>
+               <Location
+                  uuid = "5AEFE813-0DFB-4471-B1DC-77D11D29BB9B - 2fa7e04cae3d7dd8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iTag.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;iTag.ViewController&gt;"
+                  moduleName = "iTag"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/espiritu/Downloads/iTag-master/iTag/iTag/ARViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "316">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
