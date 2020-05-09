@@ -1,8 +1,8 @@
 /*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-The sample app's main view controller.
+Written by David Espiritu.
+ 
+ References from Apple ARKit3 Documentation and Buzzlight tutorial on ARKit3 Tracking.
+ Character module from buzzlight.
 */
 
 import UIKit
@@ -68,7 +68,7 @@ class ViewController: UIViewController, ARSessionDelegate {
     
     // The 3D character to display.
     var character: BodyTrackedEntity?
-    let characterOffset: SIMD3<Float> = [0, 0, 0] // Offset the character by one meter to the left
+    let characterOffset: SIMD3<Float> = [0, 0, 0]
     let characterAnchor = AnchorEntity()
     
     let sphereAnchor = AnchorEntity()
@@ -83,8 +83,6 @@ class ViewController: UIViewController, ARSessionDelegate {
     
     var showRobot = false
     
-    // A tracked raycast which is used to place the character accurately
-    // in the scene wherever the user taps.
     var placementRaycast: ARTrackedRaycast?
     var tapPlacementAnchor: AnchorEntity?
     
@@ -100,13 +98,11 @@ class ViewController: UIViewController, ARSessionDelegate {
         
         arView.session.delegate = self
         
-        // If the iOS device doesn't support body tracking, raise a developer error for
-        // this unhandled case.
+      //check if device is supported
         guard ARBodyTrackingConfiguration.isSupported else {
             fatalError("This feature is only supported on devices with an A12 chip")
         }
 
-        // Run a body tracking configration.
         let configuration = ARBodyTrackingConfiguration()
         arView.session.run(configuration)
         
