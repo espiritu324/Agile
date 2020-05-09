@@ -231,13 +231,13 @@
         <!--ARView-->
         <scene sceneID="jZb-G7-WTE">
             <objects>
-                <viewController id="9KM-ca-xnt" userLabel="ARView" customClass="ViewController" customModule="Joint_Visualizer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9KM-ca-xnt" userLabel="ARView" customClass="ViewController" customModule="iTag" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h8G-Ib-Nau" userLabel="ARView" customClass="ARView" customModule="RealityKit">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5DW-h8-vIh">
-                                <rect key="frame" x="20" y="599" width="374" height="33"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5DW-h8-vIh">
+                                <rect key="frame" x="20" y="581" width="374" height="33"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBe-aa-JFc">
                                         <rect key="frame" x="0.0" y="0.0" width="141" height="33"/>
@@ -266,28 +266,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8D-qe-605">
-                                <rect key="frame" x="20" y="622" width="374" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="shv-2o-xkk"/>
-                                </constraints>
-                            </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ham-ft-jSW">
-                                <rect key="frame" x="364" y="21.5" width="30" height="27.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="OVo-Gc-lRA"/>
-                                    <constraint firstAttribute="width" constant="30" id="bfM-za-HF0"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" backgroundImage="person" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
-                                </state>
-                                <connections>
-                                    <action selector="toggleRobotVisibility" destination="9KM-ca-xnt" eventType="touchUpInside" id="PUu-Z6-3eV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJs-ah-hCV" userLabel="Remove Picked Joints">
-                                <rect key="frame" x="364" y="67" width="30" height="27.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJs-ah-hCV" userLabel="Remove Picked Joints">
+                                <rect key="frame" x="364" y="21" width="30" height="27.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="NWL-wS-tmQ"/>
                                     <constraint firstAttribute="height" constant="30" id="glg-EH-kTE"/>
@@ -298,33 +278,45 @@
                                     <action selector="removeAllPickedJoints" destination="9KM-ca-xnt" eventType="touchUpInside" id="hjg-r3-HZl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ahp-fJ-jYh">
+                                <rect key="frame" x="141" y="672" width="132" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Tag">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="tagButton:" destination="9KM-ca-xnt" eventType="touchUpInside" id="ihF-G0-unf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLp-DC-Ta6">
+                                <rect key="frame" x="74" y="643" width="266" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Ham-ft-jSW" firstAttribute="top" secondItem="ttX-rU-3NZ" secondAttribute="top" constant="20" id="0za-p6-RgN"/>
                             <constraint firstItem="ttX-rU-3NZ" firstAttribute="trailing" secondItem="UJs-ah-hCV" secondAttribute="trailing" constant="20" id="PxA-V7-0uz"/>
                             <constraint firstAttribute="trailing" secondItem="5DW-h8-vIh" secondAttribute="trailing" constant="20" id="QxG-AG-c91"/>
-                            <constraint firstItem="UJs-ah-hCV" firstAttribute="top" secondItem="Ham-ft-jSW" secondAttribute="bottom" constant="16" id="SYL-Ws-KaN"/>
-                            <constraint firstItem="5DW-h8-vIh" firstAttribute="bottom" secondItem="g8D-qe-605" secondAttribute="top" constant="10" id="Vc7-2y-clX"/>
-                            <constraint firstItem="g8D-qe-605" firstAttribute="leading" secondItem="h8G-Ib-Nau" secondAttribute="leading" constant="20" id="Zhl-70-Ps2"/>
                             <constraint firstItem="5DW-h8-vIh" firstAttribute="leading" secondItem="ttX-rU-3NZ" secondAttribute="leading" constant="20" id="fxX-BZ-s46"/>
-                            <constraint firstAttribute="bottom" secondItem="g8D-qe-605" secondAttribute="bottom" constant="20" id="k0K-A1-2F4"/>
-                            <constraint firstItem="ttX-rU-3NZ" firstAttribute="trailing" secondItem="Ham-ft-jSW" secondAttribute="trailing" constant="20" id="noz-fJ-Vdb"/>
-                            <constraint firstItem="ttX-rU-3NZ" firstAttribute="trailing" secondItem="g8D-qe-605" secondAttribute="trailing" constant="20" id="oIN-Td-wzP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ttX-rU-3NZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="MZC-dH-0A5"/>
                     <connections>
                         <outlet property="arView" destination="h8G-Ib-Nau" id="4Bo-gY-5N8"/>
-                        <outlet property="jointNamePickerView" destination="g8D-qe-605" id="Mag-dV-Dqm"/>
-                        <outlet property="toggleRobotButton" destination="Ham-ft-jSW" id="gVf-ZV-MKS"/>
+                        <outlet property="status" destination="OLp-DC-Ta6" id="B1H-4b-lQI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kge-hV-ydk" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1703" y="-1226"/>
+            <point key="canvasLocation" x="1702.8985507246377" y="-1226.1160714285713"/>
         </scene>
     </scenes>
     <resources>
@@ -332,7 +324,6 @@
         <image name="globe" catalog="system" width="128" height="121"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
-        <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
     </resources>
 </document>

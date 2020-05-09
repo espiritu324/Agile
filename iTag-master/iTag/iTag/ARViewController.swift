@@ -31,11 +31,39 @@ class ViewController: UIViewController, ARSessionDelegate {
 
     @IBOutlet var arView: ARView!
     
-    @IBOutlet weak var toggleRobotButton: UIButton!
-    @IBOutlet weak var jointNamePickerView: UIPickerView!
+//    @IBOutlet weak var toggleRobotButton: UIButton!
+//    @IBOutlet weak var jointNamePickerView: UIPickerView!
     @IBOutlet weak var statusText: UITextField!
-    @IBAction func tagButton(_ sender: Any) {
-        statusText.text = "Unable to find player"
+    
+    @IBOutlet weak var status: UILabel!
+    @IBAction func tagButton(_ sender: UIButton) {
+        var playerCheck = false
+        guard let anchors = arView.session.currentFrame?.anchors else {return}
+               for anchor in anchors {
+                   if let bodyAnchor = anchor as? ARBodyAnchor, let character = character,
+                       let frame = arView.session.currentFrame, character.jointNames.count == bodyAnchor.skeleton.jointModelTransforms.count {
+                       
+                       hideAllJoints2D()
+                       
+                       let bodyPosition = simd_make_float3(bodyAnchor.transform.columns.3)
+                       
+                       for transform in bodyAnchor.skeleton.jointModelTransforms {
+                           let position = bodyPosition + simd_make_float3(transform.columns.3)
+                           let projection = frame.camera.projectPoint([position.x, position.y, bodyPosition.z], orientation: .portrait, viewportSize: view.bounds.size)
+                           let shapeLayer = CAShapeLayer();
+                           shapeLayer.path = UIBezierPath(ovalIn: CGRect(x: CGFloat(projection.x), y: CGFloat(projection.y), width: 10, height: 10)).cgPath;
+                           shapeLayer.fillColor = UIColor.green.cgColor
+                           view.layer.addSublayer(shapeLayer)
+                           jointDots.append(shapeLayer)
+                        playerCheck = true
+                       }
+                   }
+               }
+        if(playerCheck){
+            status.text = "Player tagged!"
+        }else{
+            status.text = "Unable to find player..."
+        }
     }
     
     // The 3D character to display.
@@ -63,11 +91,11 @@ class ViewController: UIViewController, ARSessionDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        jointNamePickerView.dataSource = self
-        jointNamePickerView.delegate = self
+//        jointNamePickerView.dataSource = self
+//        jointNamePickerView.delegate = self
         
 //        jointNames.append("Waiting for a body anchor..")
-        jointNamePickerView.reloadAllComponents()
+//        jointNamePickerView.reloadAllComponents()
 
         
         arView.session.delegate = self
@@ -181,17 +209,7 @@ class ViewController: UIViewController, ARSessionDelegate {
         }
     }
     
-    @IBAction func toggleRobotVisibility() {
-        showRobot = !showRobot
-        if let currentBackgroundImage = toggleRobotButton.currentBackgroundImage {
-            if showRobot {
-                toggleRobotButton.setBackgroundImage(currentBackgroundImage.withTintColor(.white), for: .normal)
-            } else {
-                toggleRobotButton.setBackgroundImage(currentBackgroundImage.withTintColor(.black), for: .normal)
-                character?.removeFromParent()
-            }
-        }
-    }
+    
     
     @IBAction func hideAllJoints3D() {
         jointSpheres.forEach {
@@ -243,7 +261,7 @@ class ViewController: UIViewController, ARSessionDelegate {
                     character.jointNames.forEach {
                         jointNames.append(character.jointName(forPath: $0).rawValue)
                     }
-                    jointNamePickerView.reloadAllComponents()
+//                    jointNamePickerView.reloadAllComponents()
                 }
             }
             
