@@ -40,6 +40,8 @@ class LoginViewController: UIViewController {
         user["score"] = 0
         user["latitude"] = 0.0
         user["longitude"] = 0.0
+        user["altitude"] = 0.0
+        user["status"] = false
         
         user.signUpInBackground { (success, error) in
             if success {
