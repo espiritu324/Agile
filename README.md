@@ -1,6 +1,6 @@
 
 # iTag
-
+Only run iTag-master. Other folder has become outdated.
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
