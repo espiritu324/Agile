@@ -70,19 +70,7 @@ class PlayerViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-           // Get the new view controller using segue.destination.
-           // Pass the selected object to the new view controller.
-           
-           let cell = sender as! UITableViewCell
-           let indexPath = tableView.indexPath(for: cell)!
-           let player = players[indexPath.row]
-           
-           let PlayerViewController = segue.destination as! PlayerViewController
-           PlayerViewController.player = player
-           tableView.deselectRow(at: indexPath, animated: true)
-       }
-    
+   
 
 
 }
